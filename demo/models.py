@@ -24,3 +24,15 @@ class Class(models.Model):
     number = models.IntegerField()
     division = models.CharField(max_length=255)
     class_teacher = models.CharField(max_length=255)
+
+
+class Subjects(models.Model):
+    name = models.CharField(max_length=255)
+    hours_per_week = models.FloatField()
+
+
+class ClassTeacher(models.Model):
+    phone_number = models.IntegerField()
+    name = models.CharField(max_length=255)
+    qualification = models.CharField(max_length=255)
+    subject_handled = models.CharField(max_length=255)
